@@ -18,7 +18,8 @@ public class Bear extends Critter{
         }
     }
 
-    // Should alternate on each different move between a slash character (/) and a backslash character () starting with a slash.
+    // Should alternate on each different move between a slash character (/) and a backslash character ()
+    // starting with a slash.
     public String toString() {
         if (moves % 2 == 0){
             return "/";
