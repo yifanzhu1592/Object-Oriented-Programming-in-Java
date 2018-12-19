@@ -9,6 +9,7 @@ public class Bear extends Critter{
         moves = 0;
     }
 
+    // Color.WHITE for a polar bear (when polar is true), Color.BLACK otherwise (when polar is false)
     public Color getColor(){
         if (polar){
             return Color.WHITE;
@@ -17,6 +18,7 @@ public class Bear extends Critter{
         }
     }
 
+    // Should alternate on each different move between a slash character (/) and a backslash character () starting with a slash.
     public String toString() {
         if (moves % 2 == 0){
             return "/";
@@ -25,6 +27,7 @@ public class Bear extends Critter{
         }
     }
 
+    // always infect if an enemy is in front, otherwise hop if possible, otherwise turn left.
     public Action getMove(CritterInfo info) {
         moves++;
 
