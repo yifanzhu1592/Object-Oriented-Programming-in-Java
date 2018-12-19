@@ -8,10 +8,12 @@ public class Giant extends Critter{
         moves = 0;
     }
 
+    //  Color.GRAY
     public Color getColor() {
         return Color.GRAY;
     }
 
+    //  "fee" for 6 moves, then "fie" for 6 moves, then "foe" for 6 moves, then "fum" for 6 moves, then repeat.
     public String toString() {
         if (moves % 6 == 0) {
             if (moves % 24 == 0) {
@@ -29,6 +31,7 @@ public class Giant extends Critter{
         }
     }
 
+    //  always infect if an enemy is in front, otherwise hop if possible, otherwise turn right.
     public Action getMove(CritterInfo info) {
         moves++;
 
